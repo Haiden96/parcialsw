@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+  <meta http-equiv="content-type" content="text/html;charset=iso-8859-1" /><!-- /Added by HTTrack -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Diagramador UML</title>
+
+    <link type="text/css" rel="stylesheet" href="css/UDStyle.css"/>
+    <link type="text/css" rel="stylesheet" href="css/chat2.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="UDCore.js"></script>
+    <script type="text/javascript" src="UDModules.js"></script>
+    <script type="text/javascript" src="UDApplication.js"></script>
+
+    <link rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+     crossorigin="anonymous">
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+
+    <script src="../socket.io/socket.io.js"></script>
+    <script src="./usuario.js"></script>
+    <script src="./ruta.js"></script>
+
+
+
+
+  </head>
+
+  <body>
+
+  	<font color="blue" face="Helvetica, Verdana, Arial" size="2"><i><b>jsUML2</b></font><br>
+      <br>
+      <input type="button" class='btn btn-warning' onclick="show()" value="Convertir XML a JAVA">
+    <div class="row">
+      <div id="umldiagram"> </div>
+
+      <div class="col-2" style="position: fixed;left: 85%;width: 200px;height:50px">
+
+        <div class="panel panel-primary">
+          <div class="panel-heading" style="background: #E69E53; margin-top: 10px">
+            <span class="glyphicon glyphicon-comment"></span><h4>CHAT ONLINE</h4>
+                <div class="panel-body" style="background: #ffffff;height: 300px;">
+                    <ul id="lista" class="chat">
+                          <!-- aqui el mensaje-->
+                    </ul>
+                </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group" >
+                      <form id="formulario">
+                        <input id="mensaje" type="text" class="form-control"
+                        placeholder="Ingresa tu mensaje..." style="width: 180px;height: 20px"/>
+                        <span class="input-group-btn">
+                          <br>
+                            <button class="btn btn-success" id="btn-chat">
+                                Enviar</button>
+                        </span>
+                      </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    <div id="debug"></div>
+    <script>
+
+      function show(){
+        window.open("/convert", "Diseño Web", "width=1000, height=700")
+      }
+
+    </script>
+
+  </body>
